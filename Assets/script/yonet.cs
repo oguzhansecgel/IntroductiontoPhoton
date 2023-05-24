@@ -27,6 +27,7 @@ public class yonet : MonoBehaviourPunCallbacks
     {
         Debug.Log("odaya girildi");
         GameObject nesne = PhotonNetwork.Instantiate("kup",Vector3.zero,Quaternion.identity,0,null);
+        nesne.GetComponent<PhotonView>().Owner.NickName = "Secgel";
         
     }
     public override void OnLeftLobby()
