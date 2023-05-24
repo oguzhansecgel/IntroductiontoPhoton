@@ -21,12 +21,13 @@ public class yonet : MonoBehaviourPunCallbacks
         Debug.Log("lobiye girildi");
         PhotonNetwork.JoinOrCreateRoom("oda",new RoomOptions { MaxPlayers =2,IsOpen=true,IsVisible=true},TypedLobby.Default);
         
-
+       // PhotonNetwork.JoinRandomRoom();
     }
     public override void OnJoinedRoom()
     {
         Debug.Log("odaya girildi");
-
+        GameObject nesne = PhotonNetwork.Instantiate("kup",Vector3.zero,Quaternion.identity,0,null);
+        
     }
     public override void OnLeftLobby()
     {
