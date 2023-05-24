@@ -44,8 +44,8 @@ public class hareket : MonoBehaviour
             }
         }
     }
-    [PunRPC]
 
+    [PunRPC]
     public void yokol(int deger)
     {
 
